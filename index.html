@@ -1,479 +1,385 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Smile Achievers offers warm, family-centered pediatric occupational, sensory integration, and speech therapy to help every child shine." />
-  <meta property="og:title" content="Smile Achievers" />
-  <title>Smile Achievers | Pediatric Occupational Therapy</title>
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap');
-
-    html { scroll-behavior: smooth; }
-
-    :root {
-      --sa-bg: #F7F5F2;
-      --sa-surface: #FFFFFF;
-      --sa-text: #1C1C1A;
-      --sa-muted: #6B6860;
-      --sa-accent: #8B9E8A;
-      --sa-accent-light: #D4DDD3;
-      --sa-border: #E8E4DF;
-      --sa-wash: #EEF0ED;
-    }
-
-    body {
-      background: var(--sa-bg);
-      color: var(--sa-text);
-      font-family: 'DM Sans', sans-serif;
-      line-height: 1.8;
-    }
-
-    .serif { font-family: 'DM Serif Display', serif; }
-
-    .dot-grid {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background-image: radial-gradient(circle, rgba(139,158,138,0.22) 1px, transparent 1px);
-      background-size: 22px 22px;
-      opacity: 0.26;
-      animation: drift 22s linear infinite;
-    }
-
-    @keyframes drift {
-      from { transform: translate3d(0, 0, 0); }
-      to { transform: translate3d(12px, -10px, 0); }
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 700ms ease, transform 700ms ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .underline-slide {
-      position: relative;
-    }
-
-    .underline-slide::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      height: 1px;
-      width: 100%;
-      background: currentColor;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 300ms ease;
-    }
-
-    .underline-slide:hover::after,
-    .underline-slide:focus-visible::after {
-      transform: scaleX(1);
-    }
-
-    .faq-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 320ms ease;
-    }
-
-    .faq-item[aria-expanded="true"] .faq-content {
-      max-height: 240px;
-    }
-
-    .faq-item[aria-expanded="true"] .faq-chevron {
-      transform: rotate(180deg);
-    }
-
-    .focus-ring:focus-visible {
-      outline: 2px solid var(--sa-accent);
-      outline-offset: 3px;
-      border-radius: 0.5rem;
-    }
-  </style>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          maxWidth: {
-            content: '1100px'
-          },
-          colors: {
-            sa: {
-              bg: '#F7F5F2',
-              surface: '#FFFFFF',
-              text: '#1C1C1A',
-              muted: '#6B6860',
-              accent: '#8B9E8A',
-              accentLight: '#D4DDD3',
-              border: '#E8E4DF',
-              wash: '#EEF0ED'
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Smile Achievers provides warm, family-centred pediatric occupational therapy, sensory integration, and speech therapy in Ingleburn NSW."
+    />
+    <meta property="og:title" content="Smile Achievers | Pediatric Therapy Ingleburn" />
+    <title>Smile Achievers | Pediatric Therapy Ingleburn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: '#1B3F6E',
+              amber: '#F5A623',
+              'amber-light': '#FEF3DC',
+              'navy-light': '#E8EEF6',
+              border: '#E2E6EC',
+              base: '#F8F7F4',
+              body: '#5A6A7E'
+            },
+            fontFamily: {
+              serif: ['DM Serif Display'],
+              sans: ['DM Sans']
+            },
+            boxShadow: {
+              card: '0 16px 36px rgba(27,63,110,0.12)'
             }
-          },
-          fontFamily: {
-            serif: ['DM Serif Display', 'serif'],
-            sans: ['DM Sans', 'sans-serif']
-          },
-          boxShadow: {
-            gentle: '0 14px 34px rgba(28, 28, 26, 0.08)'
           }
         }
+      };
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap');
+      body { background:#F8F7F4; color:#5A6A7E; font-family:'DM Sans', sans-serif; }
+      .reveal { opacity:0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+      .reveal.visible { opacity:1; transform: translateY(0); }
+      .nav-link { position:relative; }
+      .nav-link::after { content:''; position:absolute; left:0; bottom:-6px; width:100%; height:2px; background:#F5A623; transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
+      .nav-link:hover::after,.nav-link:focus-visible::after { transform:scaleX(1); }
+      .dot-grid {
+        background-image: radial-gradient(rgba(27,63,110,.15) 1.2px, transparent 1.2px);
+        background-size: 16px 16px;
+        opacity:.25;
       }
-    };
-  </script>
-</head>
-<body class="bg-sa-bg text-sa-text font-sans antialiased">
-  <header class="fixed top-0 left-0 right-0 z-50 border-b border-sa-border/70 bg-[rgba(247,245,242,0.92)] backdrop-blur">
-    <nav role="navigation" aria-label="Main" class="mx-auto flex w-full max-w-content items-center justify-between px-5 py-4 md:px-8">
-      <a href="#top" class="serif focus-ring text-2xl tracking-wide">Smile Achievers</a>
-      <div class="hidden items-center gap-8 lg:flex">
-        <a class="underline-slide focus-ring text-sm text-sa-muted" href="#about">About</a>
-        <a class="underline-slide focus-ring text-sm text-sa-muted" href="#services">Services</a>
-        <a class="underline-slide focus-ring text-sm text-sa-muted" href="#approach">Our Approach</a>
-        <a class="underline-slide focus-ring text-sm text-sa-muted" href="#contact">Contact</a>
-        <a href="#contact" class="focus-ring rounded-full border border-sa-accent px-5 py-2 text-sm text-sa-accent transition hover:bg-sa-accent hover:text-sa-surface">Book a Consultation</a>
-      </div>
-      <button id="menuBtn" class="focus-ring inline-flex items-center justify-center rounded-md border border-sa-border px-3 py-2 text-sa-text lg:hidden" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-          <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
-        </svg>
-      </button>
-    </nav>
-    <div id="mobileMenu" class="max-h-0 overflow-hidden border-t border-sa-border bg-sa-bg transition-all duration-300 lg:hidden">
-      <div class="mx-auto flex max-w-content flex-col gap-4 px-5 py-5 md:px-8">
-        <a class="focus-ring text-sa-muted" href="#about">About</a>
-        <a class="focus-ring text-sa-muted" href="#services">Services</a>
-        <a class="focus-ring text-sa-muted" href="#approach">Our Approach</a>
-        <a class="focus-ring text-sa-muted" href="#contact">Contact</a>
-        <a href="#contact" class="focus-ring inline-block rounded-full border border-sa-accent px-4 py-2 text-center text-sm text-sa-accent">Book a Consultation</a>
-      </div>
-    </div>
-  </header>
-
-  <main id="top" class="pt-20">
-    <section class="relative min-h-screen overflow-hidden">
-      <div class="dot-grid"></div>
-      <div class="relative mx-auto grid min-h-screen w-full max-w-content items-center gap-14 px-5 py-16 md:px-8 lg:grid-cols-5">
-        <div class="reveal lg:col-span-3">
-          <p class="mb-6 text-sm uppercase tracking-[0.18em] text-sa-muted">Pediatric Therapy for Growing Minds</p>
-          <h1 class="serif mb-7 max-w-2xl text-5xl leading-[1.08] md:text-6xl lg:text-7xl">Helping children thrive in their own way.</h1>
-          <p class="mb-8 max-w-xl text-lg font-light text-sa-muted">At Smile Achievers, we create calm, joyful therapy experiences where children feel safe to explore and grow. Every session is tailored with gentle care so families feel supported from the very first conversation.</p>
-          <div class="flex flex-wrap items-center gap-6">
-            <a href="#services" class="focus-ring rounded-full bg-sa-accent px-6 py-3 text-sm text-sa-surface transition hover:shadow-gentle">Explore Services</a>
-            <a href="#about" class="underline-slide focus-ring text-sm text-sa-muted">Meet Our Team</a>
+      .star-pattern {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 7l2.8 6 6.6.5-5 4.2 1.5 6.3L20 20.5 14.1 24l1.5-6.3-5-4.2 6.6-.5z' fill='white' fill-opacity='0.06'/%3E%3C/svg%3E");
+      }
+      .faq-panel { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+    </style>
+  </head>
+  <body class="font-sans text-body antialiased">
+    <header class="fixed top-0 inset-x-0 z-50 border-b border-transparent">
+      <nav role="navigation" class="backdrop-blur bg-[rgba(248,247,244,0.95)]">
+        <div class="max-w-[1100px] mx-auto px-5 lg:px-8 py-3 flex items-center justify-between gap-4">
+          <a href="#top" class="inline-flex items-center gap-3" aria-label="Smile Achievers Home">
+            <svg width="40" height="40" viewBox="0 0 64 64" aria-hidden="true">
+              <circle cx="31" cy="15" r="4" fill="none" stroke="#1B3F6E" stroke-width="2.4"/>
+              <path d="M31 19v15m0 0-9 12m9-12 11 11m-11-11-12-2m12 2 12-13" fill="none" stroke="#1B3F6E" stroke-linecap="round" stroke-width="2.4"/>
+              <path d="M48 8l1.5 3.2 3.5.3-2.6 2.2.8 3.3-3.2-1.9-3.1 1.9.8-3.3-2.7-2.2 3.5-.3z" fill="#F5A623"/>
+              <path d="M18 52c4 4 24 4 28 0" fill="none" stroke="#F5A623" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <span class="leading-tight">
+              <span class="font-serif text-xl"><span class="text-amber">Smile</span> <span class="text-navy">Achievers</span></span>
+              <span class="block text-[11px] italic text-navy/60">Creating Smiles, Inspiring Lives</span>
+            </span>
+          </a>
+          <div class="hidden md:flex items-center gap-6 text-sm font-medium text-navy">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#approach" class="nav-link">Our Approach</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#contact" class="rounded-full px-5 py-2.5 bg-amber text-white hover:bg-[#df951f] transition">Book a Consultation</a>
+          </div>
+          <button id="menuBtn" class="md:hidden p-2 text-navy" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle navigation">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
+        <div id="mobileMenu" class="md:hidden max-h-0 overflow-hidden transition-all duration-300 border-t border-border bg-base">
+          <div class="px-5 pb-5 pt-3 flex flex-col gap-3 text-navy">
+            <a href="#about" class="py-2">About</a>
+            <a href="#services" class="py-2">Services</a>
+            <a href="#approach" class="py-2">Our Approach</a>
+            <a href="#contact" class="py-2">Contact</a>
+            <a href="#contact" class="mt-1 text-center rounded-full px-5 py-2.5 bg-amber text-white">Book a Consultation</a>
           </div>
         </div>
-        <div class="reveal lg:col-span-2">
-          <svg class="mx-auto w-full max-w-md drop-shadow-[0_22px_28px_rgba(28,28,26,0.12)]" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract calming shape">
-            <path fill="#D4DDD3" d="M434.8 342.5c-21.4 77-93.5 138.6-176.6 142-83.1 3.4-177.2-51.2-209-129.4-31.8-78.2-1.4-180.1 67.5-245.4C185.5 44.4 292.9 15 369.7 55.4c76.8 40.3 123.8 150.1 65.1 287.1z"/>
-          </svg>
-        </div>
-      </div>
-    </section>
+      </nav>
+    </header>
 
-    <section id="about" class="border-y border-sa-border bg-sa-bg">
-      <div class="mx-auto grid w-full max-w-content gap-12 px-5 py-16 md:px-8 lg:grid-cols-2">
-        <div class="reveal grid gap-8 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
-          <article>
-            <h3 class="serif text-5xl">12+</h3>
-            <p class="mt-2 text-sm uppercase tracking-wider text-sa-muted">Years Experience</p>
-          </article>
-          <article>
-            <h3 class="serif text-5xl">500+</h3>
-            <p class="mt-2 text-sm uppercase tracking-wider text-sa-muted">Children Supported</p>
-          </article>
-          <article>
-            <h3 class="serif text-5xl">3</h3>
-            <p class="mt-2 text-sm uppercase tracking-wider text-sa-muted">Core Services</p>
-          </article>
-        </div>
-        <div class="reveal">
-          <p class="mb-5 text-lg font-light text-sa-muted">Smile Achievers was built on one simple belief: Every child deserves to shine. We honor each child’s pace and personality while helping them build skills that make daily life easier and more joyful.</p>
-          <p class="text-lg font-light text-sa-muted">Our therapists partner closely with parents, caregivers, and teachers. Together, we create practical plans that feel supportive at home, in school, and in the community.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="mx-auto w-full max-w-content px-5 py-20 md:px-8">
-      <h2 class="reveal serif mb-12 text-center text-4xl">What We Offer</h2>
-      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <article class="reveal rounded-3xl border border-sa-border bg-sa-surface p-10 transition duration-300 hover:-translate-y-1 hover:shadow-gentle">
-          <svg class="mb-7 h-11 w-11 text-sa-accent" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-            <path d="M9 26c0-3 1.8-5 4.5-5 2.1 0 3.8 1.1 4.7 2.8V14c0-2.4 1.6-4 3.8-4s3.9 1.6 3.9 4v8.5c1-1.4 2.5-2.2 4.1-2.2 3 0 5 2.3 5 5.5V31c0 6.4-5.2 11.6-11.6 11.6h-1.7C14.8 42.6 9 36.8 9 29.8V26z"/>
-            <path d="M33 13l3 3 6-6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <h3 class="serif mb-3 text-2xl">Occupational Therapy</h3>
-          <p class="mb-5 font-light text-sa-muted">We help children strengthen everyday skills so routines feel smoother and less stressful. Sessions support fine motor growth for writing, dressing, and play. Our approach builds confidence and independence in ways children can carry into school and home life.</p>
-          <div class="flex flex-wrap gap-2 text-xs">
-            <span class="rounded-full border border-sa-accentLight bg-sa-accentLight/45 px-3 py-1 text-sa-muted">Fine Motor</span>
-            <span class="rounded-full border border-sa-accentLight bg-sa-accentLight/45 px-3 py-1 text-sa-muted">Self-Care</span>
-            <span class="rounded-full border border-sa-accentLight bg-sa-accentLight/45 px-3 py-1 text-sa-muted">School Readiness</span>
+    <main id="top" class="pt-[86px]">
+      <section class="min-h-screen flex items-center">
+        <div class="max-w-[1100px] mx-auto px-5 lg:px-8 py-16 grid lg:grid-cols-12 gap-10 items-center w-full">
+          <div class="lg:col-span-7 reveal">
+            <p class="text-xs tracking-[0.22em] uppercase text-amber font-medium">Pediatric Therapy · Ingleburn NSW</p>
+            <h1 class="font-serif text-navy text-5xl md:text-6xl lg:text-[68px] leading-[1.05] mt-4">Helping every child reach their brightest potential.</h1>
+            <svg class="mt-4" width="210" height="22" viewBox="0 0 210 22" aria-hidden="true"><path d="M4 6c44 18 158 18 202 0" fill="none" stroke="#F5A623" stroke-width="4" stroke-linecap="round"/></svg>
+            <p class="mt-6 text-lg leading-8 max-w-xl">At Smile Achievers, we provide expert occupational therapy, sensory integration, and speech therapy in a warm, welcoming environment where every child is celebrated.</p>
+            <div class="mt-8 flex flex-wrap items-center gap-5">
+              <a href="#services" class="rounded-full px-7 py-3 bg-amber text-white font-medium hover:bg-[#df951f] transition">Explore Our Services</a>
+              <a href="#contact" class="text-navy font-medium hover:text-amber transition">Get in Touch →</a>
+            </div>
           </div>
-        </article>
-
-        <article class="reveal rounded-3xl border border-sa-border bg-sa-surface p-10 transition duration-300 hover:-translate-y-1 hover:shadow-gentle">
-          <svg class="mb-7 h-11 w-11 text-sa-accent" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-            <path d="M8 24c4-8 10-8 14 0s10 8 14 0 10-8 14 0" stroke-linecap="round"/>
-            <path d="M8 33c4-8 10-8 14 0s10 8 14 0 10-8 14 0" stroke-linecap="round" opacity=".7"/>
-            <circle cx="24" cy="14" r="4"/>
-          </svg>
-          <h3 class="serif mb-3 text-2xl">Sensory Integration</h3>
-          <p class="mb-5 font-light text-sa-muted">Some children experience the world more intensely, and we meet that with understanding. We design sensory diets and play-based routines that support regulation across the day. Together, we shape environments where children feel settled, safe, and ready to engage.</p>
-          <div class="flex flex-wrap gap-2 text-xs">
-            <span class="rounded-full border border-sa-accentLight bg-sa-accentLight/45 px-3 py-1 text-sa-muted">Sensory Diet</span>
-            <span class="rounded-full border border-sa-accentLight bg-sa-accentLight/45 px-3 py-1 text-sa-muted">Regulation</span>
-            <span class="rounded-full border border-sa-accentLight bg-sa-accentLight/45 px-3 py-1 text-sa-muted">Play-Based</span>
+          <div class="lg:col-span-5 relative reveal">
+            <div class="absolute inset-6 -z-10 dot-grid rounded-[40px]"></div>
+            <div class="absolute -right-3 top-10 w-48 h-48 rounded-full bg-navy/90"></div>
+            <div class="relative rounded-[42%_58%_63%_37%/50%_35%_65%_50%] bg-amber-light p-12 min-h-[420px] flex items-center justify-center">
+              <svg width="230" height="250" viewBox="0 0 230 250" aria-hidden="true">
+                <circle cx="110" cy="52" r="16" fill="none" stroke="#1B3F6E" stroke-width="6"/>
+                <path d="M110 69v86m0 0-50 64m50-64 60 58m-60-58-62-9m62 9 68-72" fill="none" stroke="#1B3F6E" stroke-linecap="round" stroke-width="6"/>
+                <path d="M178 26l6 12.8 14 .9-10.8 9.2 3.3 13.5-12.5-7.5-12.5 7.5 3.3-13.5-10.8-9.2 14-.9z" fill="#F5A623"/>
+                <path d="M56 232c13 10 106 10 118 0" fill="none" stroke="#F5A623" stroke-width="8" stroke-linecap="round"/>
+              </svg>
+            </div>
           </div>
-        </article>
+        </div>
+      </section>
 
-        <article class="reveal rounded-3xl border border-sa-border bg-sa-surface p-10 transition duration-300 hover:-translate-y-1 hover:shadow-gentle md:col-span-2 lg:col-span-1">
-          <svg class="mb-7 h-11 w-11 text-sa-accent" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-            <path d="M10 13h28a4 4 0 014 4v10a4 4 0 01-4 4H24l-8 8v-8h-6a4 4 0 01-4-4V17a4 4 0 014-4z"/>
-            <path d="M16 22c2-2 4-2 6 0s4 2 6 0 4-2 6 0" stroke-linecap="round"/>
-          </svg>
-          <h3 class="serif mb-3 text-2xl">Speech Therapy</h3>
-          <p class="mb-5 font-light text-sa-muted">Communication should feel empowering, not overwhelming. We support language development, articulation clarity, and AAC strategies when helpful. Children gain tools to express their ideas with greater ease and confidence.</p>
-          <div class="flex flex-wrap gap-2 text-xs">
-            <span class="rounded-full border border-sa-accentLight bg-sa-accentLight/45 px-3 py-1 text-sa-muted">Language</span>
-            <span class="rounded-full border border-sa-accentLight bg-sa-accentLight/45 px-3 py-1 text-sa-muted">Articulation</span>
-            <span class="rounded-full border border-sa-accentLight bg-sa-accentLight/45 px-3 py-1 text-sa-muted">AAC</span>
+      <hr class="border-border" />
+
+      <section id="about" class="bg-navy-light py-20">
+        <div class="max-w-[1100px] mx-auto px-5 lg:px-8 grid md:grid-cols-2 gap-12 items-start">
+          <div class="grid grid-cols-2 gap-6 reveal">
+            <article>
+              <h3 class="font-serif text-5xl text-navy">12+</h3>
+              <p class="text-sm text-navy mt-2 pb-2 inline-block border-b-2 border-amber">Clinical Experience</p>
+            </article>
+            <article>
+              <h3 class="font-serif text-5xl text-navy">3 Core</h3>
+              <p class="text-sm text-navy mt-2 pb-2 inline-block border-b-2 border-amber">Therapy Services</p>
+            </article>
           </div>
-        </article>
-      </div>
-    </section>
+          <div class="pl-6 border-l-4 border-amber reveal">
+            <p class="leading-8">Smile Achievers was founded on a simple belief: every child deserves support that feels encouraging, respectful, and genuinely joyful. We partner closely with parents to build skills in ways that are practical for home, school, and everyday life.</p>
+            <p class="leading-8 mt-5">Based in Ingleburn, our clinic is proud to serve local families with thoughtful care, clear communication, and personalised plans that help children grow with confidence. Creating Smiles, Inspiring Lives is more than a tagline — it is how we show up each day.</p>
+          </div>
+        </div>
+      </section>
 
-    <section id="approach" class="bg-sa-wash py-20">
-      <div class="mx-auto w-full max-w-content px-5 md:px-8">
-        <h2 class="reveal serif mx-auto mb-16 max-w-3xl text-center text-4xl italic">Therapy that meets every child where they are.</h2>
-        <div class="relative grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <div class="pointer-events-none absolute left-0 right-0 top-8 hidden border-t border-dashed border-sa-accent/70 lg:block"></div>
-          <article class="reveal relative rounded-2xl border border-sa-border bg-sa-surface p-6">
-            <div class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-sa-accentLight text-sm font-medium">1</div>
-            <h3 class="serif text-2xl">Assessment</h3>
-            <p class="mt-2 text-sa-muted">Understanding your child's needs.</p>
+      <section id="services" class="py-24">
+        <div class="max-w-[1100px] mx-auto px-5 lg:px-8 text-center reveal">
+          <p class="text-xs uppercase tracking-[0.22em] text-amber font-medium">Our Services</p>
+          <h2 class="font-serif text-navy text-4xl mt-3">What We Offer</h2>
+        </div>
+        <div class="max-w-[1100px] mx-auto px-5 lg:px-8 mt-12 grid md:grid-cols-3 gap-7">
+          <article class="reveal bg-white border border-border rounded-[20px] border-t-[3px] border-t-amber p-9 hover:-translate-y-1 hover:shadow-card transition">
+            <svg width="38" height="38" viewBox="0 0 48 48" fill="none" stroke="#F5A623" stroke-width="2.2" aria-hidden="true"><path d="M9 29c0-4 3-7 7-7h4V9a4 4 0 1 1 8 0v12h3V13a4 4 0 1 1 8 0v14c0 8-5 14-13 14h-8c-5 0-9-4-9-9v-3z"/><path d="M33 32l4-4 4 4-4 4-4-4z"/></svg>
+            <h3 class="font-serif text-2xl text-navy mt-5">Occupational Therapy</h3>
+            <p class="mt-4 leading-8">We help children build independence in daily routines through practical, engaging therapy. Sessions support fine motor development for tasks like writing, dressing, and self-care. We also focus on school readiness so children feel capable and confident in learning environments.</p>
+            <div class="mt-5 flex flex-wrap gap-2 text-xs">
+              <span class="px-3 py-1 rounded-full bg-amber-light text-amber">Fine Motor</span><span class="px-3 py-1 rounded-full bg-amber-light text-amber">Self-Care</span><span class="px-3 py-1 rounded-full bg-amber-light text-amber">School Readiness</span>
+            </div>
           </article>
-          <article class="reveal relative rounded-2xl border border-sa-border bg-sa-surface p-6">
-            <div class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-sa-accentLight text-sm font-medium">2</div>
-            <h3 class="serif text-2xl">Goal Setting</h3>
-            <p class="mt-2 text-sa-muted">Collaborative plan with family.</p>
+          <article class="reveal bg-white border border-border rounded-[20px] border-t-[3px] border-t-amber p-9 hover:-translate-y-1 hover:shadow-card transition">
+            <svg width="38" height="38" viewBox="0 0 48 48" fill="none" stroke="#F5A623" stroke-width="2.2" aria-hidden="true"><path d="M8 24c0-9 8-16 17-16s15 5 15 12-6 11-12 11-10-4-10-9 4-7 8-7 6 2 6 5-2 4-4 4" stroke-linecap="round"/></svg>
+            <h3 class="font-serif text-2xl text-navy mt-5">Sensory Integration</h3>
+            <p class="mt-4 leading-8">Our sensory integration therapy supports children who experience the world more intensely or differently. We design sensory diets that promote regulation across home, school, and community settings. Through play-based strategies, children learn to feel calmer, more organised, and ready to participate.</p>
+            <div class="mt-5 flex flex-wrap gap-2 text-xs">
+              <span class="px-3 py-1 rounded-full bg-amber-light text-amber">Sensory Diet</span><span class="px-3 py-1 rounded-full bg-amber-light text-amber">Regulation</span><span class="px-3 py-1 rounded-full bg-amber-light text-amber">Play-Based</span>
+            </div>
           </article>
-          <article class="reveal relative rounded-2xl border border-sa-border bg-sa-surface p-6">
-            <div class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-sa-accentLight text-sm font-medium">3</div>
-            <h3 class="serif text-2xl">Therapy Sessions</h3>
-            <p class="mt-2 text-sa-muted">Structured, play-based, joyful.</p>
-          </article>
-          <article class="reveal relative rounded-2xl border border-sa-border bg-sa-surface p-6">
-            <div class="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-sa-accentLight text-sm font-medium">4</div>
-            <h3 class="serif text-2xl">Progress Reviews</h3>
-            <p class="mt-2 text-sa-muted">Regular check-ins and adjustments.</p>
+          <article class="reveal bg-white border border-border rounded-[20px] border-t-[3px] border-t-amber p-9 hover:-translate-y-1 hover:shadow-card transition">
+            <svg width="38" height="38" viewBox="0 0 48 48" fill="none" stroke="#F5A623" stroke-width="2.2" aria-hidden="true"><path d="M8 10h32v20H20l-8 8v-8H8z"/><path d="M24 16c3 0 5 2 5 5s-2 5-5 5"/><path d="M30 14c4 2 6 5 6 9s-2 7-6 9"/></svg>
+            <h3 class="font-serif text-2xl text-navy mt-5">Speech Therapy</h3>
+            <p class="mt-4 leading-8">We support language development and articulation in ways that are positive and child-led. Sessions can include AAC support so every child has a strong voice and meaningful ways to communicate. Our goal is to grow communication confidence for connection, learning, and everyday expression.</p>
+            <div class="mt-5 flex flex-wrap gap-2 text-xs">
+              <span class="px-3 py-1 rounded-full bg-amber-light text-amber">Language</span><span class="px-3 py-1 rounded-full bg-amber-light text-amber">Articulation</span><span class="px-3 py-1 rounded-full bg-amber-light text-amber">AAC</span>
+            </div>
           </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="mx-auto w-full max-w-content space-y-14 px-5 py-20 md:px-8">
-      <div class="reveal grid items-center gap-10 lg:grid-cols-2">
-        <svg viewBox="0 0 600 380" class="h-64 w-full rounded-3xl border border-sa-border bg-sa-accentLight/50 p-4" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path fill="#D4DDD3" d="M93 84c57-71 202-101 303-35s126 198 53 257c-73 58-225 43-319-28-94-71-94-123-37-194z" />
-        </svg>
-        <article>
-          <h3 class="serif mb-3 text-3xl">Family-centered at every step</h3>
-          <p class="text-lg font-light text-sa-muted">Parents know their children best, and your voice guides every plan we build. We share practical tools so progress feels steady and meaningful between sessions too.</p>
-        </article>
-      </div>
-
-      <div class="reveal grid items-center gap-10 lg:grid-cols-2">
-        <article class="lg:order-1">
-          <h3 class="serif mb-3 text-3xl">Evidence-based, play-led therapy</h3>
-          <p class="text-lg font-light text-sa-muted">Our methods are grounded in research and delivered through warm, engaging play. Children stay motivated while practicing skills that transfer into everyday routines.</p>
-        </article>
-        <svg viewBox="0 0 600 380" class="h-64 w-full rounded-3xl border border-sa-border bg-sa-accentLight/50 p-4 lg:order-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path fill="#D4DDD3" d="M130 58c100-44 259-39 323 52s-4 210-119 239S69 316 48 216c-21-99-17-123 82-158z" />
-        </svg>
-      </div>
-
-      <div class="reveal grid items-center gap-10 lg:grid-cols-2">
-        <svg viewBox="0 0 600 380" class="h-64 w-full rounded-3xl border border-sa-border bg-sa-accentLight/50 p-4" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path fill="#D4DDD3" d="M145 53c95-67 247-64 328 24s87 233 6 277-244 29-326-65c-81-95-103-170-8-236z" />
-        </svg>
-        <article>
-          <h3 class="serif mb-3 text-3xl">A team that truly listens</h3>
-          <p class="text-lg font-light text-sa-muted">We begin with curiosity, not assumptions, so children and caregivers feel understood right away. Small adjustments and thoughtful communication keep therapy aligned with your goals.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="border-y border-sa-border bg-sa-bg py-20">
-      <div class="mx-auto w-full max-w-content px-5 md:px-8">
-        <h2 class="reveal serif mb-12 text-center text-4xl">Families we've supported</h2>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <article class="reveal rounded-2xl bg-sa-surface p-7 shadow-[0_8px_20px_rgba(28,28,26,0.06)]">
-            <div class="mb-5 h-12 w-1 rounded-full bg-sa-accent"></div>
-            <p class="serif mb-5 text-lg italic">"Our son now walks into noisy places with confidence. Smile Achievers gave us simple routines that changed our days at home."</p>
-            <p class="text-sm text-sa-muted">Maya R. • Parent of a 6-year-old with sensory sensitivities</p>
-          </article>
-          <article class="reveal rounded-2xl bg-sa-surface p-7 shadow-[0_8px_20px_rgba(28,28,26,0.06)]">
-            <div class="mb-5 h-12 w-1 rounded-full bg-sa-accent"></div>
-            <p class="serif mb-5 text-lg italic">"We saw progress in just weeks. Our daughter is using more words every day and feels proud when she is understood."</p>
-            <p class="text-sm text-sa-muted">Daniel &amp; Priya K. • Parents of a 4-year-old with speech delay</p>
-          </article>
-          <article class="reveal rounded-2xl bg-sa-surface p-7 shadow-[0_8px_20px_rgba(28,28,26,0.06)]">
-            <div class="mb-5 h-12 w-1 rounded-full bg-sa-accent"></div>
-            <p class="serif mb-5 text-lg italic">"Buttoning shirts and holding pencils used to be hard. The team made practice feel playful, and our child now asks to show us new skills."</p>
-            <p class="text-sm text-sa-muted">Elena T. • Parent of a 7-year-old building fine motor skills</p>
-          </article>
+      <section id="approach" class="bg-amber-light py-24">
+        <div class="max-w-[1100px] mx-auto px-5 lg:px-8 reveal">
+          <h2 class="font-serif italic text-navy text-center text-4xl">Therapy that meets every child where they are.</h2>
+          <div class="mt-12 grid md:grid-cols-4 gap-6 relative">
+            <div class="hidden md:block absolute top-8 inset-x-16 border-t border-dashed border-amber"></div>
+            <article class="relative z-10 text-center">
+              <div class="w-16 h-16 mx-auto rounded-full bg-navy text-white grid place-items-center font-semibold">1</div>
+              <span class="inline-block -mt-3 bg-amber text-navy text-xs px-2 py-1 rounded-full">Assessment</span>
+              <p class="mt-3">We start by deeply understanding your child's unique strengths and challenges.</p>
+            </article>
+            <article class="relative z-10 text-center">
+              <div class="w-16 h-16 mx-auto rounded-full bg-navy text-white grid place-items-center font-semibold">2</div>
+              <span class="inline-block -mt-3 bg-amber text-navy text-xs px-2 py-1 rounded-full">Goal Setting</span>
+              <p class="mt-3">Together with your family, we create a meaningful, personalised therapy plan.</p>
+            </article>
+            <article class="relative z-10 text-center">
+              <div class="w-16 h-16 mx-auto rounded-full bg-navy text-white grid place-items-center font-semibold">3</div>
+              <span class="inline-block -mt-3 bg-amber text-navy text-xs px-2 py-1 rounded-full">Therapy Sessions</span>
+              <p class="mt-3">Structured, play-based sessions that are engaging, joyful, and effective.</p>
+            </article>
+            <article class="relative z-10 text-center">
+              <div class="w-16 h-16 mx-auto rounded-full bg-navy text-white grid place-items-center font-semibold">4</div>
+              <span class="inline-block -mt-3 bg-amber text-navy text-xs px-2 py-1 rounded-full">Progress Reviews</span>
+              <p class="mt-3">Regular check-ins keep families informed and goals on track.</p>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="faq" class="mx-auto w-full max-w-content px-5 py-20 md:px-8">
-      <h2 class="reveal serif mb-10 text-center text-4xl">Common questions</h2>
-      <div class="reveal divide-y divide-sa-border border-y border-sa-border">
-        <article class="faq-item" aria-expanded="false">
-          <button class="focus-ring flex w-full items-center justify-between py-5 text-left" aria-expanded="false">
-            <span>What age groups does Smile Achievers work with?</span>
-            <span class="faq-chevron transition-transform duration-300">⌄</span>
-          </button>
-          <div class="faq-content pb-5 text-sa-muted">We support children from toddlers through early teens. Each plan is tailored to age, developmental stage, and family priorities.</div>
-        </article>
-        <article class="faq-item" aria-expanded="false">
-          <button class="focus-ring flex w-full items-center justify-between py-5 text-left" aria-expanded="false">
-            <span>What should we expect at the first session?</span>
-            <span class="faq-chevron transition-transform duration-300">⌄</span>
-          </button>
-          <div class="faq-content pb-5 text-sa-muted">Your first visit includes a warm conversation, guided observation, and time for your questions. We end with clear next steps so you feel informed and supported.</div>
-        </article>
-        <article class="faq-item" aria-expanded="false">
-          <button class="focus-ring flex w-full items-center justify-between py-5 text-left" aria-expanded="false">
-            <span>How long does therapy usually take?</span>
-            <span class="faq-chevron transition-transform duration-300">⌄</span>
-          </button>
-          <div class="faq-content pb-5 text-sa-muted">Every child is different. Some families need short-term support, while others benefit from longer plans with regular progress reviews.</div>
-        </article>
-        <article class="faq-item" aria-expanded="false">
-          <button class="focus-ring flex w-full items-center justify-between py-5 text-left" aria-expanded="false">
-            <span>Do you accept insurance or offer private pay options?</span>
-            <span class="faq-chevron transition-transform duration-300">⌄</span>
-          </button>
-          <div class="faq-content pb-5 text-sa-muted">We provide both private pay and support for out-of-network reimbursement paperwork. Our team can walk you through billing details before therapy begins.</div>
-        </article>
-        <article class="faq-item" aria-expanded="false">
-          <button class="focus-ring flex w-full items-center justify-between py-5 text-left" aria-expanded="false">
-            <span>Is telehealth available?</span>
-            <span class="faq-chevron transition-transform duration-300">⌄</span>
-          </button>
-          <div class="faq-content pb-5 text-sa-muted">Yes, telehealth sessions are available for select goals and parent coaching. We will recommend the format that best fits your child's needs.</div>
-        </article>
-        <article class="faq-item" aria-expanded="false">
-          <button class="focus-ring flex w-full items-center justify-between py-5 text-left" aria-expanded="false">
-            <span>How are parents involved in therapy?</span>
-            <span class="faq-chevron transition-transform duration-300">⌄</span>
-          </button>
-          <div class="faq-content pb-5 text-sa-muted">Parent partnership is central to our care. We share session insights, home strategies, and progress updates so growth continues between visits.</div>
-        </article>
-      </div>
-    </section>
+      <section class="py-24">
+        <div class="max-w-[1100px] mx-auto px-5 lg:px-8 space-y-14">
+          <div class="grid md:grid-cols-2 gap-10 items-center reveal">
+            <div class="h-52 rounded-[38%_62%_57%_43%/41%_35%_65%_59%] bg-amber-light"></div>
+            <div>
+              <h3 class="font-serif text-3xl text-navy">Family-centered at every step</h3>
+              <p class="mt-4 leading-8">Parents are essential partners in everything we do, from goal setting to everyday strategy sharing. We prioritise clear communication so you always know how your child is progressing and how to support them between sessions.</p>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-10 items-center reveal">
+            <div class="md:order-1 order-2">
+              <h3 class="font-serif text-3xl text-navy">Evidence-based, play-led therapy</h3>
+              <p class="mt-4 leading-8">Our approach combines clinical rigour with playful, child-friendly delivery that keeps children engaged. This balance helps skills transfer more naturally into real-life routines and relationships.</p>
+            </div>
+            <div class="md:order-2 order-1 h-52 rounded-[42%_58%_52%_48%/63%_39%_61%_37%] bg-navy-light"></div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-10 items-center reveal">
+            <div class="h-52 rounded-[58%_42%_45%_55%/49%_59%_41%_51%] bg-amber-light"></div>
+            <div>
+              <h3 class="font-serif text-3xl text-navy">Your local Ingleburn therapy team</h3>
+              <p class="mt-4 leading-8">Smile Achievers is proudly rooted in Ingleburn, with strong ties to local schools and families. We are here to provide trusted support across Ingleburn and surrounding suburbs with consistency, warmth, and care.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section id="contact" class="relative overflow-hidden bg-sa-accent py-16 text-sa-surface">
-      <div class="absolute inset-0 opacity-10" style="background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"><circle cx="2" cy="2" r="1.5" fill="white"/></svg>');"></div>
-      <div class="relative mx-auto flex w-full max-w-content flex-col items-start justify-between gap-6 px-5 md:px-8 lg:flex-row lg:items-center">
+      <section class="py-24">
+        <div class="max-w-[1100px] mx-auto px-5 lg:px-8">
+          <div class="reveal text-center">
+            <p class="text-xs uppercase tracking-[0.22em] text-amber font-medium">Families We've Supported</p>
+            <h2 class="font-serif text-4xl text-navy mt-3">Words from our community</h2>
+          </div>
+          <div class="grid md:grid-cols-3 gap-6 mt-12">
+            <article class="reveal bg-white rounded-2xl p-6 shadow-[0_12px_30px_rgba(27,63,110,0.08)] border-l-[3px] border-amber"><p class="font-serif italic text-[18px] text-navy">“The sensory support has completely changed our afternoons at home. Our son is calmer, more confident, and genuinely excited to come each week.”</p><p class="mt-5 text-sm">— Parent of a child with sensory processing challenges</p></article>
+            <article class="reveal bg-white rounded-2xl p-6 shadow-[0_12px_30px_rgba(27,63,110,0.08)] border-l-[3px] border-amber"><p class="font-serif italic text-[18px] text-navy">“We felt heard from day one. The speech sessions are playful and practical, and now our daughter is using more words every week with so much pride.”</p><p class="mt-5 text-sm">— Parent of a child with speech delay</p></article>
+            <article class="reveal bg-white rounded-2xl p-6 shadow-[0_12px_30px_rgba(27,63,110,0.08)] border-l-[3px] border-amber"><p class="font-serif italic text-[18px] text-navy">“The fine motor strategies were simple to use at home and made a real difference at school. Smile Achievers gave us confidence as parents too.”</p><p class="mt-5 text-sm">— Parent of a child with fine motor difficulties</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-navy-light py-24">
+        <div class="max-w-[1100px] mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-10">
+          <div class="reveal">
+            <h2 class="font-serif text-4xl text-navy">Get in Touch</h2>
+            <p class="mt-3">We'd love to hear from you.</p>
+            <div class="mt-8 space-y-4">
+              <p class="flex gap-3"><svg class="mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2"><path d="M12 22s8-7 8-13a8 8 0 1 0-16 0c0 6 8 13 8 13z"/><circle cx="12" cy="9" r="2.5"/></svg><span>5 Hodkin Place, Ingleburn NSW 2565</span></p>
+              <p class="flex gap-3"><svg class="mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.4 19.4 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.8 2.6a2 2 0 0 1-.4 2L8 9.7a16 16 0 0 0 6.3 6.3l1.4-1.4a2 2 0 0 1 2-.5 13 13 0 0 0 2.6.9A2 2 0 0 1 22 16.9z"/></svg><a class="text-navy hover:text-amber" href="tel:0494158115">0494 158 115</a></p>
+              <p class="flex gap-3"><svg class="mt-1" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5A623" stroke-width="2"><path d="M4 5h16v14H4z"/><path d="m4 7 8 6 8-6"/></svg><a class="text-navy hover:text-amber" href="mailto:deepa.smileachievers@gmail.com">deepa.smileachievers@gmail.com</a></p>
+            </div>
+            <a href="tel:0494158115" class="mt-8 block bg-amber rounded-xl p-6 hover:bg-[#df951f] transition">
+              <p class="text-white font-medium">Book a Discovery Call</p>
+              <p class="text-white/90 text-sm mt-1">Call us directly:</p>
+              <p class="font-serif text-4xl text-navy mt-2">0494 158 115</p>
+            </a>
+          </div>
+          <div class="reveal bg-white rounded-2xl p-7 border border-border">
+            <form id="contactForm" class="space-y-4" novalidate>
+              <input type="hidden" name="_subject" value="New Enquiry — Smile Achievers" />
+              <input type="hidden" name="_captcha" value="false" />
+              <div><label class="block text-sm text-navy font-medium mb-1" for="fullName">Full Name</label><input id="fullName" name="name" required class="w-full rounded-lg border border-border bg-white px-3 py-3 focus:outline-none focus:border-amber focus:ring-2 focus:ring-navy/20"/></div>
+              <div><label class="block text-sm text-navy font-medium mb-1" for="phone">Phone Number</label><input id="phone" name="phone" type="tel" required class="w-full rounded-lg border border-border bg-white px-3 py-3 focus:outline-none focus:border-amber focus:ring-2 focus:ring-navy/20"/></div>
+              <div><label class="block text-sm text-navy font-medium mb-1" for="email">Email Address</label><input id="email" name="email" type="email" required class="w-full rounded-lg border border-border bg-white px-3 py-3 focus:outline-none focus:border-amber focus:ring-2 focus:ring-navy/20"/></div>
+              <div><label class="block text-sm text-navy font-medium mb-1" for="age">Child's Age</label><input id="age" name="child_age" type="number" min="0" max="18" class="w-full rounded-lg border border-border bg-white px-3 py-3 focus:outline-none focus:border-amber focus:ring-2 focus:ring-navy/20"/></div>
+              <div><label class="block text-sm text-navy font-medium mb-1" for="service">Service of Interest</label><select id="service" name="service_interest" class="w-full rounded-lg border border-border bg-white px-3 py-3 focus:outline-none focus:border-amber focus:ring-2 focus:ring-navy/20"><option>Occupational Therapy</option><option>Sensory Integration</option><option>Speech Therapy</option><option>Not Sure Yet</option></select></div>
+              <div><label class="block text-sm text-navy font-medium mb-1" for="message">Message</label><textarea id="message" name="message" rows="4" placeholder="Tell us a little about your child and how we can help..." class="w-full rounded-lg border border-border bg-white px-3 py-3 focus:outline-none focus:border-amber focus:ring-2 focus:ring-navy/20"></textarea></div>
+              <button type="submit" class="w-full bg-amber text-white rounded-lg py-3 font-medium hover:bg-[#df951f] transition">Send Message</button>
+              <p id="formStatus" class="hidden rounded-lg px-4 py-3 text-sm"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="py-24 bg-white">
+        <div class="max-w-[900px] mx-auto px-5 lg:px-8">
+          <div class="text-center reveal">
+            <p class="text-xs uppercase tracking-[0.22em] text-amber font-medium">FAQ</p>
+            <h2 class="font-serif text-4xl text-navy mt-3">Common questions</h2>
+          </div>
+          <div class="mt-10 divide-y divide-border reveal">
+            <div class="py-4"><button class="faq-btn w-full flex items-center justify-between text-left text-navy font-medium" aria-expanded="false">What age groups does Smile Achievers work with?<svg class="faq-icon w-5 h-5 text-amber transition-transform" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l5 5 5-5"/></svg></button><div class="faq-panel"><p class="pt-3 pb-2">We support children across early childhood, primary school, and adolescence, with therapy tailored to each stage of development and family priorities.</p></div></div>
+            <div class="py-4"><button class="faq-btn w-full flex items-center justify-between text-left text-navy font-medium" aria-expanded="false">What can I expect at the first session?<svg class="faq-icon w-5 h-5 text-amber transition-transform" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l5 5 5-5"/></svg></button><div class="faq-panel"><p class="pt-3 pb-2">Your first session focuses on getting to know your child, your goals, and daily routines. We listen carefully, assess strengths, and map out clear next steps together.</p></div></div>
+            <div class="py-4"><button class="faq-btn w-full flex items-center justify-between text-left text-navy font-medium" aria-expanded="false">How long does therapy typically take?<svg class="faq-icon w-5 h-5 text-amber transition-transform" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l5 5 5-5"/></svg></button><div class="faq-panel"><p class="pt-3 pb-2">Therapy duration varies based on each child's goals and progress. We review regularly with families and adjust plans to keep support practical, meaningful, and effective.</p></div></div>
+            <div class="py-4"><button class="faq-btn w-full flex items-center justify-between text-left text-navy font-medium" aria-expanded="false">Do you offer telehealth sessions?<svg class="faq-icon w-5 h-5 text-amber transition-transform" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l5 5 5-5"/></svg></button><div class="faq-panel"><p class="pt-3 pb-2">Yes, telehealth options are available where clinically appropriate. We can discuss whether virtual sessions suit your child and family routine during your enquiry call.</p></div></div>
+            <div class="py-4"><button class="faq-btn w-full flex items-center justify-between text-left text-navy font-medium" aria-expanded="false">How are parents involved in the therapy process?<svg class="faq-icon w-5 h-5 text-amber transition-transform" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l5 5 5-5"/></svg></button><div class="faq-panel"><p class="pt-3 pb-2">Parent partnership is central to our approach. We share practical strategies, progress updates, and home ideas so therapy gains continue beyond the clinic.</p></div></div>
+            <div class="py-4"><button class="faq-btn w-full flex items-center justify-between text-left text-navy font-medium" aria-expanded="false">Where are you located and is parking available?<svg class="faq-icon w-5 h-5 text-amber transition-transform" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l5 5 5-5"/></svg></button><div class="faq-panel"><p class="pt-3 pb-2">You can find us at 5 Hodkin Place, Ingleburn NSW 2565. Convenient local parking is available to make visits easy for families.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 bg-navy text-white star-pattern">
+        <div class="max-w-[1100px] mx-auto px-5 lg:px-8 grid md:grid-cols-[1fr_auto] gap-6 items-center">
+          <div>
+            <h2 class="font-serif italic text-4xl">Ready to help your child shine?</h2>
+            <p class="mt-3 text-white/80">Take the first step today. Our friendly team at Smile Achievers in Ingleburn is here to support your family.</p>
+          </div>
+          <div class="flex flex-wrap items-center gap-4 md:justify-end">
+            <a href="#contact" class="bg-amber text-navy px-6 py-3 rounded-full font-medium hover:bg-[#df951f] transition">Send Us a Message</a>
+            <a href="tel:0494158115" class="text-amber font-medium hover:text-white">Or call us: 0494 158 115</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-navy text-white/70">
+      <div class="max-w-[1100px] mx-auto px-5 lg:px-8 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
         <div>
-          <h2 class="serif mb-2 text-4xl">Ready to take the first step?</h2>
-          <p class="max-w-2xl text-sa-surface/90">We'd love to meet your child. Book a free 15-minute discovery call with Smile Achievers today.</p>
+          <p class="font-serif text-2xl"><span class="text-amber">Smile</span> <span class="text-white">Achievers</span></p>
+          <p class="italic text-white/60 mt-2">Creating Smiles, Inspiring Lives.</p>
+          <p class="mt-4">&nbsp;</p>
         </div>
-        <a href="#" class="focus-ring rounded-full bg-sa-surface px-6 py-3 text-sm text-sa-accent transition hover:bg-transparent hover:text-sa-surface hover:ring-1 hover:ring-sa-surface">Book a Discovery Call</a>
+        <div><p class="text-white font-medium mb-3">Services</p><ul class="space-y-2"><li>Occupational Therapy</li><li>Sensory Integration</li><li>Speech Therapy</li></ul></div>
+        <div><p class="text-white font-medium mb-3">Quick Links</p><ul class="space-y-2"><li><a href="#about" class="hover:text-white">About</a></li><li><a href="#approach" class="hover:text-white">Our Approach</a></li><li><a href="#faq" class="hover:text-white">FAQ</a></li><li><a href="#contact" class="hover:text-white">Contact</a></li></ul></div>
+        <div><p class="text-white font-medium mb-3">Contact</p><ul class="space-y-2"><li>5 Hodkin Place, Ingleburn NSW 2565</li><li><a href="tel:0494158115" class="hover:text-white">0494 158 115</a></li><li><a href="mailto:deepa.smileachievers@gmail.com" class="hover:text-white">deepa.smileachievers@gmail.com</a></li></ul></div>
       </div>
-    </section>
-  </main>
+      <div class="border-t border-white/10 py-5 text-center text-xs">© 2025 Smile Achievers. Creating Smiles, Inspiring Lives.</div>
+    </footer>
 
-  <footer class="bg-sa-text text-[#9C9890]">
-    <div class="mx-auto grid w-full max-w-content gap-10 px-5 py-14 md:px-8 md:grid-cols-2 lg:grid-cols-4">
-      <div>
-        <h3 class="serif text-2xl text-sa-surface">Smile Achievers</h3>
-        <p class="mt-3 text-sm">Every child deserves to shine.</p>
-      </div>
-      <div>
-        <h4 class="mb-3 text-sm uppercase tracking-wider text-sa-surface/80">Services</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a class="underline-slide focus-ring" href="#services">Occupational Therapy</a></li>
-          <li><a class="underline-slide focus-ring" href="#services">Sensory Integration</a></li>
-          <li><a class="underline-slide focus-ring" href="#services">Speech Therapy</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="mb-3 text-sm uppercase tracking-wider text-sa-surface/80">Quick Links</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a class="underline-slide focus-ring" href="#about">About</a></li>
-          <li><a class="underline-slide focus-ring" href="#approach">Our Approach</a></li>
-          <li><a class="underline-slide focus-ring" href="#faq">FAQ</a></li>
-          <li><a class="underline-slide focus-ring" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="mb-3 text-sm uppercase tracking-wider text-sa-surface/80">Contact</h4>
-        <ul class="space-y-2 text-sm">
-          <li>120 Willow Grove Ave, Suite 200</li>
-          <li>Portland, OR 97205</li>
-          <li>(503) 555-0148</li>
-          <li>hello@smileachievers.com</li>
-        </ul>
-      </div>
-    </div>
-    <div class="border-t border-[#3A3935]">
-      <div class="mx-auto flex w-full max-w-content flex-col justify-between gap-2 px-5 py-5 text-xs md:flex-row md:px-8">
-        <p>© 2025 Smile Achievers. All rights reserved.</p>
-        <p>Designed with care</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    menuBtn.addEventListener('click', () => {
-      const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
-      menuBtn.setAttribute('aria-expanded', String(!isOpen));
-      mobileMenu.style.maxHeight = isOpen ? '0px' : `${mobileMenu.scrollHeight}px`;
-    });
-
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
+    <script>
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      menuBtn?.addEventListener('click', () => {
+        const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
+        menuBtn.setAttribute('aria-expanded', String(!isOpen));
+        mobileMenu.style.maxHeight = isOpen ? '0px' : mobileMenu.scrollHeight + 'px';
+      });
+      mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
         menuBtn.setAttribute('aria-expanded', 'false');
         mobileMenu.style.maxHeight = '0px';
-      });
-    });
+      }));
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+      document.querySelectorAll('.faq-btn').forEach((button) => {
+        button.addEventListener('click', () => {
+          const expanded = button.getAttribute('aria-expanded') === 'true';
+          const panel = button.nextElementSibling;
+          const icon = button.querySelector('.faq-icon');
+          button.setAttribute('aria-expanded', String(!expanded));
+          panel.style.maxHeight = expanded ? '0px' : panel.scrollHeight + 'px';
+          icon.style.transform = expanded ? 'rotate(0deg)' : 'rotate(180deg)';
+        });
+      });
+
+      const contactForm = document.getElementById('contactForm');
+      const formStatus = document.getElementById('formStatus');
+      contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        formStatus.className = 'hidden';
+
+        const formData = Object.fromEntries(new FormData(contactForm).entries());
+        try {
+          const response = await fetch('https://formsubmit.co/ajax/deepa.smileachievers@gmail.com', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify(formData)
+          });
+
+          if (!response.ok) throw new Error('Unable to send right now.');
+
+          formStatus.className = 'mt-2 rounded-lg px-4 py-3 text-sm bg-amber-light text-navy border border-amber/40';
+          formStatus.textContent = 'Thank you — your message has been sent. We will be in touch with your family shortly.';
+          contactForm.reset();
+        } catch (error) {
+          formStatus.className = 'mt-2 rounded-lg px-4 py-3 text-sm bg-white text-navy border border-border';
+          formStatus.innerHTML = 'We could not send your message right now. Please email us at <a class="text-amber underline" href="mailto:deepa.smileachievers@gmail.com">deepa.smileachievers@gmail.com</a>.';
         }
       });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    document.querySelectorAll('.faq-item').forEach(item => {
-      const button = item.querySelector('button');
-      button.addEventListener('click', () => {
-        const expanded = button.getAttribute('aria-expanded') === 'true';
-        button.setAttribute('aria-expanded', String(!expanded));
-        item.setAttribute('aria-expanded', String(!expanded));
-      });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
+
