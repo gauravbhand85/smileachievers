@@ -58,7 +58,7 @@
       <nav role="navigation" class="backdrop-blur bg-[rgba(248,247,244,0.95)]">
         <div class="max-w-[1100px] mx-auto px-5 lg:px-8 py-3 flex items-center justify-between gap-4">
           <a href="#top" class="inline-flex items-center" aria-label="Smile Achievers Home">
-            <img src="./logo.png" alt="Smile Achievers" class="h-12 w-auto md:h-14" />
+            <img src="./logo.png" alt="Smile Achievers" class="h-14 w-auto max-w-[280px] object-contain" />
           </a>
           <div class="hidden md:flex items-center gap-6 text-sm font-medium text-navy">
             <a href="#about" class="nav-link">About</a>
@@ -251,7 +251,7 @@
             </a>
           </div>
           <div class="reveal bg-white rounded-2xl p-7 border border-border">
-            <form id="contactForm" class="space-y-4" novalidate>
+            <form id="contactForm" class="space-y-4" novalidate action="https://formsubmit.co/deepa.smileachievers@gmail.com" method="POST">
               <input type="hidden" name="_subject" value="New Enquiry — Smile Achievers" />
               <input type="hidden" name="_captcha" value="false" />
               <div><label class="block text-sm text-navy font-medium mb-1" for="fullName">Full Name</label><input id="fullName" name="name" required class="w-full rounded-lg border border-border bg-white px-3 py-3 focus:outline-none focus:border-amber focus:ring-2 focus:ring-navy/20"/></div>
@@ -301,7 +301,7 @@
     <footer class="bg-navy text-white/70">
       <div class="max-w-[1100px] mx-auto px-5 lg:px-8 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
         <div>
-          <img src="./logo.png" alt="Smile Achievers" class="h-12 w-auto" />
+          <img src="./logo.png" alt="Smile Achievers" class="h-14 w-auto max-w-[260px] object-contain" />
           <p class="mt-4">&nbsp;</p>
         </div>
         <div><p class="text-white font-medium mb-3">Services</p><ul class="space-y-2"><li>Occupational Therapy</li><li>Sensory Integration</li><li>Speech Therapy</li></ul></div>
@@ -347,8 +347,9 @@
 
       const contactForm = document.getElementById('contactForm');
       const formStatus = document.getElementById('formStatus');
-      contactForm.addEventListener('submit', async (event) => {
+      contactForm?.addEventListener('submit', async (event) => {
         event.preventDefault();
+        if (!formStatus) return;
         formStatus.className = 'hidden';
 
         const formData = Object.fromEntries(new FormData(contactForm).entries());
