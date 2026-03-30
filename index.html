@@ -57,24 +57,14 @@
     <header class="fixed top-0 inset-x-0 z-50 border-b border-transparent">
       <nav role="navigation" class="backdrop-blur bg-[rgba(248,247,244,0.95)]">
         <div class="max-w-[1100px] mx-auto px-5 lg:px-8 py-3 flex items-center justify-between gap-4">
-          <a href="#top" class="inline-flex items-center gap-3" aria-label="Smile Achievers Home">
-            <svg width="40" height="40" viewBox="0 0 64 64" aria-hidden="true">
-              <circle cx="31" cy="15" r="4" fill="none" stroke="#1B3F6E" stroke-width="2.4"/>
-              <path d="M31 19v15m0 0-9 12m9-12 11 11m-11-11-12-2m12 2 12-13" fill="none" stroke="#1B3F6E" stroke-linecap="round" stroke-width="2.4"/>
-              <path d="M48 8l1.5 3.2 3.5.3-2.6 2.2.8 3.3-3.2-1.9-3.1 1.9.8-3.3-2.7-2.2 3.5-.3z" fill="#F5A623"/>
-              <path d="M18 52c4 4 24 4 28 0" fill="none" stroke="#F5A623" stroke-width="2.5" stroke-linecap="round"/>
-            </svg>
-            <span class="leading-tight">
-              <span class="font-serif text-xl"><span class="text-amber">Smile</span> <span class="text-navy">Achievers</span></span>
-              <span class="block text-[11px] italic text-navy/60">Creating Smiles, Inspiring Lives</span>
-            </span>
+          <a href="#top" class="inline-flex items-center" aria-label="Smile Achievers Home">
+            <img src="/logo.svg" alt="Smile Achievers" class="h-14 w-auto max-w-[280px] object-contain" />
           </a>
           <div class="hidden md:flex items-center gap-6 text-sm font-medium text-navy">
             <a href="#about" class="nav-link">About</a>
             <a href="#services" class="nav-link">Services</a>
             <a href="#approach" class="nav-link">Our Approach</a>
             <a href="#contact" class="nav-link">Contact</a>
-            <a href="./smile-achievers-logo.svg" download="smile-achievers-logo.svg" class="nav-link">Download Logo</a>
             <a href="#contact" class="rounded-full px-5 py-2.5 bg-amber text-white hover:bg-[#df951f] transition">Book a Consultation</a>
           </div>
           <button id="menuBtn" class="md:hidden p-2 text-navy" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle navigation">
@@ -87,7 +77,6 @@
             <a href="#services" class="py-2">Services</a>
             <a href="#approach" class="py-2">Our Approach</a>
             <a href="#contact" class="py-2">Contact</a>
-            <a href="./smile-achievers-logo.svg" download="smile-achievers-logo.svg" class="py-2">Download Logo</a>
             <a href="#contact" class="mt-1 text-center rounded-full px-5 py-2.5 bg-amber text-white">Book a Consultation</a>
           </div>
         </div>
@@ -262,7 +251,7 @@
             </a>
           </div>
           <div class="reveal bg-white rounded-2xl p-7 border border-border">
-            <form id="contactForm" class="space-y-4" novalidate>
+            <form id="contactForm" class="space-y-4" novalidate action="https://formsubmit.co/deepa.smileachievers@gmail.com" method="POST">
               <input type="hidden" name="_subject" value="New Enquiry — Smile Achievers" />
               <input type="hidden" name="_captcha" value="false" />
               <div><label class="block text-sm text-navy font-medium mb-1" for="fullName">Full Name</label><input id="fullName" name="name" required class="w-full rounded-lg border border-border bg-white px-3 py-3 focus:outline-none focus:border-amber focus:ring-2 focus:ring-navy/20"/></div>
@@ -312,8 +301,7 @@
     <footer class="bg-navy text-white/70">
       <div class="max-w-[1100px] mx-auto px-5 lg:px-8 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-sm">
         <div>
-          <p class="font-serif text-2xl"><span class="text-amber">Smile</span> <span class="text-white">Achievers</span></p>
-          <p class="italic text-white/60 mt-2">Creating Smiles, Inspiring Lives.</p>
+          <img src="/logo.svg" alt="Smile Achievers" class="h-14 w-auto max-w-[260px] object-contain" />
           <p class="mt-4">&nbsp;</p>
         </div>
         <div><p class="text-white font-medium mb-3">Services</p><ul class="space-y-2"><li>Occupational Therapy</li><li>Sensory Integration</li><li>Speech Therapy</li></ul></div>
@@ -359,8 +347,9 @@
 
       const contactForm = document.getElementById('contactForm');
       const formStatus = document.getElementById('formStatus');
-      contactForm.addEventListener('submit', async (event) => {
+      contactForm?.addEventListener('submit', async (event) => {
         event.preventDefault();
+        if (!formStatus) return;
         formStatus.className = 'hidden';
 
         const formData = Object.fromEntries(new FormData(contactForm).entries());
@@ -384,3 +373,4 @@
     </script>
   </body>
 </html>
+
